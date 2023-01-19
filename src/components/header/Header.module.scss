@@ -18,18 +18,9 @@
     font-size: 2rem;
   }
 
-  &__title {
-  }
-
   &__nav-items {
     display: flex;
     gap: 4rem;
-  }
-
-  &__nav-item {
-  }
-
-  &__nav-link {
   }
 
   &__profile-btn {
@@ -40,7 +31,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.5 ease-in;
+    transition: all 0.5ms ease-in;
   }
 
   &__profile-btn:hover {
@@ -51,7 +42,7 @@
     width: 32px;
     height: 32px;
     fill: #eb455f;
-    transition: all 0.5 ease-in;
+    transition: all 0.5ms ease-in;
   }
 
   &__profile-btn:hover &__profile-svg {

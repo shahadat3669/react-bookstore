@@ -11,8 +11,6 @@
     align-items: center;
   }
 
-  &__input-group {
-  }
   &__input {
     border: 1px solid #2b3467;
     width: 100%;
@@ -21,6 +19,7 @@
   &__input:focus-visible {
     outline: none;
   }
+
   &__btn {
     background: #eb455f;
     border: 1px solid #eb455f;
