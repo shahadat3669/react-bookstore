@@ -2,40 +2,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './Book.module.scss';
+
 const Book = (props) => {
-  const { author, title, category, progress } = props;
-  const { currentChapter } = props.book.progress;
+  const { author, title, category, progress } = props.book;
+  console.log(props.book.author);
+  const { currentChapter } = progress;
   return (
-    <div className="book">
-      <div className="book__left">
-        <div className="book__text">
-          <span className="book__categories">{category}</span>
-          <h3 className="book__title">{title}</h3>
-          <p className="book__author">{author}</p>
+    <div className={styles.book}>
+      <div className={styles.book__left}>
+        <div className={styles.book__container}>
+          <span className={styles.book__categories}>{category}</span>
+          <h3 className={styles.book__title}>{title}</h3>
+          <p className={styles.book__author}>{author}</p>
         </div>
-        <div className="book__btn-group">
-          <button type="button" className="book__btn">
+        <div className={styles['book__btn-group']}>
+          <button type="button" className={styles.book__btn}>
             Comments
           </button>
-          <button type="button" className="book__btn">
+          <button type="button" className={styles.book__btn}>
             Remove
           </button>
-          <button type="button" className="book__btn">
+          <button type="button" className={styles.book__btn}>
             Edit
           </button>
         </div>
       </div>
-      <div className="book__right">
-        <div className="book__progress-container">
-          <div className="book__progress-text">
-            <h4 className="book__progress-title">64%</h4>
-            <p className="book__progress-complete">Completed</p>
+      <div className={styles.book__right}>
+        <div className={styles['book__progress-container']}>
+          <div className={styles['book__progress-container']}>
+            <h4 className={styles['book__progress-title']}>64%</h4>
+            <p className={styles['book__progress-complete']}>Completed</p>
           </div>
         </div>
-        <div className="book__chapter-details">
-          <div className="book__chapter-text">
-            <span className="book__chapter-name">Current Chapter</span>
-            <h4 className="book__chapter-title"> {currentChapter}</h4>
+        <div className={styles['book__chapter-details']}>
+          <div className={styles['book__chapter-container']}>
+            <span className={styles['book__chapter-name']}>
+              Current Chapter
+            </span>
+            <h4 className={styles['book__chapter-title']}> {currentChapter}</h4>
+          </div>
+          <div className={styles['book__chapter-btn-wrapper']}>
+            <button type="button" className={styles['book__chapter-btn']}>
+              Update Progress
+            </button>
           </div>
         </div>
       </div>
