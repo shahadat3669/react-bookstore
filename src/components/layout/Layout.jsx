@@ -6,9 +6,9 @@ import Header from '../header/Header';
 const Layout = () => (
   <>
     <Header />
-    <div className="container">
+    <main className="container">
       <Outlet />
-    </div>
+    </main>
   </>
 );
 
