@@ -1,11 +1,19 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import styles from './App.module.scss';
+import Layout from './components/layout/Layout';
+import BookList from './components/books/BookList';
+import Categories from './components/categories/Categories';
+import NoMatch from './components/layout/NoMatch';
 
 const App = () => (
-  <div className={styles.main}>
-    <h1 className={styles.main__heading}>todo</h1>
-  </div>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<BookList />} />
+      <Route path="categories" element={<Categories />} />
+      <Route path="*" element={<NoMatch />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
