@@ -1,12 +1,12 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Book.module.scss';
 
-const Book = (props) => {
-  const { author, title, category, progress } = props.book;
-  console.log(props.book.author);
+const Book = ({ book }) => {
+  const {
+    author, title, category, progress,
+  } = book;
   const { currentChapter } = progress;
   return (
     <div className={styles.book}>
@@ -40,7 +40,9 @@ const Book = (props) => {
             <span className={styles['book__chapter-name']}>
               Current Chapter
             </span>
-            <h4 className={styles['book__chapter-title']}> {currentChapter}</h4>
+            <h4 className={styles['book__chapter-title']}>
+              {currentChapter}
+            </h4>
           </div>
           <div className={styles['book__chapter-btn-wrapper']}>
             <button type="button" className={styles['book__chapter-btn']}>
@@ -55,8 +57,10 @@ const Book = (props) => {
 
 export default Book;
 
+Book.defaultProps = {
+  book: null,
+};
+
 Book.propTypes = {
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  book: PropTypes.instanceOf(Object),
 };
