@@ -51,22 +51,6 @@ const Book = ({ book }) => {
             <p className={styles['book__progress-complete']}>Completed</p>
           </div>
         </div>
-        {/* <div className={styles['book__chapter-details']}>
-          <div className={styles['book__chapter-container']}>
-            <span className={styles['book__chapter-name']}>
-              Current Chapter
-            </span>
-            <h4 className={styles['book__chapter-title']}>{completed}</h4>
-          </div>
-          <div className={styles['book__chapter-btn-wrapper']}>
-            <button
-              type="button"
-              className={styles['book__chapter-btn']}
-            >
-              Update Progress
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );
