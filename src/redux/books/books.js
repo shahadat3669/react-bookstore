@@ -1,5 +1,5 @@
 import { ADD_BOOK, DELETE_BOOK, GET_BOOKS } from '../actionTypes/bookTypes';
-import { createBookApi } from '../../utils/books.api';
+import { createBookApi, deleteBookApi } from '../../utils/books.api';
 
 const defaultSate = [];
 
@@ -15,10 +15,20 @@ export const addBook = (data) => async (dispatch) => {
   }
 };
 
-export const deleteBook = (payload) => ({
-  type: DELETE_BOOK,
-  payload,
-});
+export const deleteBook = (id) => async (dispatch) => {
+  try {
+    const response = await deleteBookApi(id);
+
+    if (
+      response.status === 201
+      && response.data === 'The book was deleted successfully!'
+    ) {
+      dispatch({ type: DELETE_BOOK, payload: id });
+    }
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 
 export const getBooks = (payload) => ({ type: GET_BOOKS, payload });
 
