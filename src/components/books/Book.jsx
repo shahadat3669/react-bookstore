@@ -47,7 +47,7 @@ const Book = ({ book }) => {
         <div className={styles['book__progress-container']}>
           <div className={styles['book__progress-container']}>
             <h4 className={styles['book__progress-title']}>
-              {`${completed}%`}
+              {`${completed || 0}%`}
             </h4>
             <p className={styles['book__progress-complete']}>Completed</p>
           </div>
