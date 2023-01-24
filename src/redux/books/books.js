@@ -1,5 +1,5 @@
 import { ADD_BOOK, DELETE_BOOK, GET_BOOKS } from '../actionTypes/bookTypes';
-import { createBookApi, deleteBookApi } from '../../utils/books.api';
+import { createBookApi, deleteBookApi, getAllBooksApi } from '../../utils/books.api';
 
 const defaultSate = [];
 
@@ -30,7 +30,23 @@ export const deleteBook = (id) => async (dispatch) => {
   }
 };
 
-export const getBooks = (payload) => ({ type: GET_BOOKS, payload });
+export const getBooks = async (dispatch) => {
+  try {
+    const response = await getAllBooksApi();
+    if (response.data.length === 0) {
+      throw new Error('There are no books.');
+    }
+    const { data } = response;
+    const books = Object.keys(data).map((key) => ({
+      item_id: key,
+      ...data[key][0],
+    }));
+
+    dispatch({ type: GET_BOOKS, payload: books });
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 
 const reducer = (state = defaultSate, action) => {
   switch (action.type) {
