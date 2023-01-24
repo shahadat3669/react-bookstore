@@ -1,11 +1,19 @@
 import { ADD_BOOK, DELETE_BOOK, GET_BOOKS } from '../actionTypes/bookTypes';
+import { createBookApi } from '../../utils/books.api';
 
 const defaultSate = [];
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+export const addBook = (data) => async (dispatch) => {
+  try {
+    const response = await createBookApi(data);
+
+    if (response.status === 201 && response.data === 'Created') {
+      dispatch({ type: ADD_BOOK, payload: data });
+    }
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 
 export const deleteBook = (payload) => ({
   type: DELETE_BOOK,
