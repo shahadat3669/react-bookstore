@@ -1,4 +1,4 @@
-import { ADD_BOOK, DELETE_BOOK } from '../actionTypes/bookTypes';
+import { ADD_BOOK, DELETE_BOOK, GET_BOOKS } from '../actionTypes/bookTypes';
 
 const defaultSate = [];
 
@@ -12,8 +12,12 @@ export const deleteBook = (payload) => ({
   payload,
 });
 
+export const getBooks = (payload) => ({ type: GET_BOOKS, payload });
+
 const reducer = (state = defaultSate, action) => {
   switch (action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case ADD_BOOK:
       return [
         ...state,
