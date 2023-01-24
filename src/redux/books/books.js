@@ -1,41 +1,57 @@
-import { ADD_BOOK, DELETE_BOOK } from '../actionTypes/bookTypes';
+import { ADD_BOOK, DELETE_BOOK, GET_BOOKS } from '../actionTypes/bookTypes';
+import { createBookApi, deleteBookApi, getAllBooksApi } from '../../utils/books.api';
 
-const defaultSate = [
-  {
-    item_id: 1,
-    title: 'First book',
-    author: 'Shahadat Hossain',
-    completed: 60,
-    category: 'Category 1',
-  },
-  {
-    item_id: 2,
-    title: 'Second book',
-    author: 'Rakib Hossain',
-    completed: 80,
-    category: 'Category 1',
-  },
-  {
-    item_id: 3,
-    title: 'Third book',
-    author: 'Monir Hossain',
-    completed: 24,
-    category: 'Category 1',
-  },
-];
+const defaultSate = [];
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+export const addBook = (data) => async (dispatch) => {
+  try {
+    const response = await createBookApi(data);
 
-export const deleteBook = (payload) => ({
-  type: DELETE_BOOK,
-  payload,
-});
+    if (response.status === 201 && response.data === 'Created') {
+      dispatch({ type: ADD_BOOK, payload: data });
+    }
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+export const deleteBook = (id) => async (dispatch) => {
+  try {
+    const response = await deleteBookApi(id);
+
+    if (
+      response.status === 201
+      && response.data === 'The book was deleted successfully!'
+    ) {
+      dispatch({ type: DELETE_BOOK, payload: id });
+    }
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+export const getBooks = async (dispatch) => {
+  try {
+    const response = await getAllBooksApi();
+    if (response.data.length === 0) {
+      throw new Error('There are no books.');
+    }
+    const { data } = response;
+    const books = Object.keys(data).map((key) => ({
+      item_id: key,
+      ...data[key][0],
+    }));
+
+    dispatch({ type: GET_BOOKS, payload: books });
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 
 const reducer = (state = defaultSate, action) => {
   switch (action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case ADD_BOOK:
       return [
         ...state,
