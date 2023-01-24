@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
 import styles from './AddBook.module.scss';
 import { addBook } from '../../redux/books/books';
@@ -15,7 +16,7 @@ const AddBook = () => {
     const newBook = {
       author,
       title,
-      item_id: new Date().getMilliseconds().toString(),
+      item_id: uuidv4(),
       category: 'Category 1',
     };
 
