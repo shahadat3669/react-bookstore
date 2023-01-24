@@ -1,28 +1,6 @@
 import { ADD_BOOK, DELETE_BOOK } from '../actionTypes/bookTypes';
 
-const defaultSate = [
-  {
-    item_id: 1,
-    title: 'First book',
-    author: 'Shahadat Hossain',
-    completed: 60,
-    category: 'Category 1',
-  },
-  {
-    item_id: 2,
-    title: 'Second book',
-    author: 'Rakib Hossain',
-    completed: 80,
-    category: 'Category 1',
-  },
-  {
-    item_id: 3,
-    title: 'Third book',
-    author: 'Monir Hossain',
-    completed: 24,
-    category: 'Category 1',
-  },
-];
+const defaultSate = [];
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
