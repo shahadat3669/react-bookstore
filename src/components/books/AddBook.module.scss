@@ -47,6 +47,16 @@
     outline: none;
   }
 
+  &__input-title:focus {
+    outline: none;
+    border: 1px solid #0290ff;
+  }
+
+  &__input-author:focus {
+    outline: none;
+    border: 1px solid #0290ff;
+  }
+
   &__input-author:focus-visible {
     outline: none;
   }
