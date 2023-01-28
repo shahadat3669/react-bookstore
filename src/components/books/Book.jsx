@@ -8,7 +8,9 @@ import styles from './Book.module.scss';
 import { deleteBook } from '../../redux/books/books';
 
 const Book = ({ book }) => {
-  const { item_id: itemID, author, title, category, completed } = book;
+  const {
+    item_id: itemID, author, title, category, completed,
+  } = book;
   const dispatch = useDispatch();
   const handleRemoveBtnClick = () => {
     dispatch(deleteBook(itemID));
