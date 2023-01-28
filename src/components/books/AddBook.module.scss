@@ -1,9 +1,19 @@
+.horizontal-divider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
+}
+
 .add-book {
   margin-top: 2rem;
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.18px;
     color: #888;
+    font-family: 'Montserrat', sans-serif;
   }
 
   &__form {
@@ -50,10 +60,5 @@
     cursor: pointer;
     transition: all 0.5s ease;
     width: 20%;
-  }
-
-  &__btn:hover {
-    background: #fff;
-    color: #0290ff;
   }
 }

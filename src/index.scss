@@ -39,7 +39,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #2b3467;
 }
 
 #root {
@@ -51,13 +50,9 @@ a {
 }
 
 .active {
-  color: #0290ff;
+  opacity: 1 !important;
 }
 
 .container {
   padding: 1rem 2rem;
-}
-
-button {
-  padding: 0.5rem 1rem;
 }

@@ -15,8 +15,9 @@
   }
 
   &__title-link {
-    font-size: 2rem;
+    font-size: 1.875rem;
     color: #0290ff;
+    font-family: 'Montserrat', sans-serif;
   }
 
   &__nav-items {
@@ -40,5 +41,14 @@
     height: 32px;
     fill: #0290ff;
     transition: all 0.5ms ease-in;
+  }
+
+  &__nav-link {
+    opacity: 0.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.813rem;
+    color: #121212;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
   }
 }

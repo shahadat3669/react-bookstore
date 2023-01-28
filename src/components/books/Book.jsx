@@ -33,6 +33,7 @@ const Book = ({ book }) => {
           >
             Comments
           </button>
+          <div className={styles['book__vertical-divider']} />
           <button
             type="button"
             className={styles.book__btn}
@@ -40,6 +41,7 @@ const Book = ({ book }) => {
           >
             Remove
           </button>
+          <div className={styles['book__vertical-divider']} />
           <button
             type="button"
             className={styles.book__btn}

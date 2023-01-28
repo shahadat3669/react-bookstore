@@ -9,7 +9,6 @@
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
   }
 
   &__title {
@@ -31,7 +30,8 @@
 
   &__btn-group {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1.313rem;
   }
 
   &__author {
@@ -41,24 +41,21 @@
   }
 
   &__btn {
-    cursor: pointer;
-    background: none;
-    color: #081c91;
-    border-right: 1px solid #081c91;
-    padding: 0 1rem;
-  }
-
-  &__btn:first-child {
-    padding-left: 0;
-  }
-
-  &__btn:last-child {
-    padding-right: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #0000;
     border: none;
+    color: #4386bf;
+    font-size: 0.875rem;
+    font-weight: 300;
+    align-items: center;
+    cursor: pointer;
   }
 
-  &__btn:hover {
-    color: #2b3467;
+  &__vertical-divider {
+    width: 0.125rem;
+    height: 1.5rem;
+    background-color: #e8e8e8;
+    margin: 0 1rem;
   }
 
   &__right {
@@ -69,7 +66,7 @@
   &__progress-wrapper {
     width: 5.625rem;
     height: 5.625rem;
-    padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+    padding: 0.63rem 1rem 0.75rem 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,12 +75,13 @@
   &__progress-text-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   &__progress-title {
     font-size: 2rem;
     font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #121212;
   }
 
   &__progress-complete {
@@ -122,10 +120,5 @@
     border-radius: 0.4rem;
     cursor: pointer;
     transition: all 0.5s ease;
-  }
-
-  &__chapter-btn:hover {
-    background: #fff;
-    color: #0290ff;
   }
 }
