@@ -14,6 +14,11 @@
 
   &__title {
     line-height: 1.5;
+    margin-top: 0.188rem;
+    font-size: 1.375rem;
+    letter-spacing: -0.2px;
+    font-weight: 700;
+    color: #121212;
   }
 
   &__categories {
@@ -22,14 +27,6 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
     opacity: 0.5;
-  }
-
-  &__title {
-    margin-top: 0.188rem;
-    font-size: 1.375rem;
-    letter-spacing: -0.2px;
-    font-weight: 700;
-    color: #121212;
   }
 
   &__btn-group {
@@ -99,6 +96,7 @@
     margin: 0 3.688rem 0 4.938rem;
     background-color: #e8e8e8;
   }
+
   &__chapter-details {
     display: flex;
     flex-direction: column;
