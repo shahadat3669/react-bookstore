@@ -32,36 +32,30 @@ const AddBook = () => {
         className={styles['add-book__form']}
         onSubmit={handleSubmit}
       >
-        <div className={styles['add-book__input-group']}>
-          <input
-            type="text"
-            className={styles['add-book__input']}
-            name="title"
-            placeholder="Book title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div className={styles['add-book__input-group']}>
-          <input
-            type="text"
-            className={styles['add-book__input']}
-            name="author"
-            placeholder="Book author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            required
-          />
-        </div>
-        <div className={styles['add-book__input-group']}>
-          <button
-            type="submit"
-            className={styles['add-book__btn']}
-          >
-            Add Book
-          </button>
-        </div>
+        <input
+          type="text"
+          className={styles['add-book__input-title']}
+          name="title"
+          placeholder="Book title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          className={styles['add-book__input-author']}
+          name="author"
+          placeholder="Book author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          required
+        />
+        <button
+          type="submit"
+          className={styles['add-book__btn']}
+        >
+          Add Book
+        </button>
       </form>
     </div>
   );
