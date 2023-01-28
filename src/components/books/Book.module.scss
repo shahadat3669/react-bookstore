@@ -16,9 +16,31 @@
     line-height: 1.5;
   }
 
+  &__categories {
+    font-weight: 700;
+    color: #121212;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+
+  &__title {
+    margin-top: 0.188rem;
+    font-size: 1.375rem;
+    letter-spacing: -0.2px;
+    font-weight: 700;
+    color: #121212;
+  }
+
   &__btn-group {
     display: flex;
     gap: 0.5rem;
+  }
+
+  &__author {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #4386bf;
   }
 
   &__btn {
@@ -44,10 +66,39 @@
 
   &__right {
     display: flex;
-    gap: 1rem;
     align-items: center;
   }
 
+  &__progress-wrapper {
+    width: 5.625rem;
+    height: 5.625rem;
+    padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__progress-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__progress-title {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &__progress-complete {
+    color: #2b34679c;
+  }
+
+  &__progress-divider {
+    width: 0.125rem;
+    height: 4.375rem;
+    margin: 0 3.688rem 0 4.938rem;
+    background-color: #e8e8e8;
+  }
   &__chapter-details {
     display: flex;
     flex-direction: column;
@@ -56,11 +107,18 @@
 
   &__chapter-title {
     line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__chapter-name {
+    text-transform: uppercase;
+    color: #2b34679c;
+    font-size: 1rem;
   }
 
   &__chapter-btn {
-    background: #eb455f;
-    border: 1px solid #eb455f;
+    background: #0290ff;
+    border: 1px solid #0290ff;
     color: #fff;
     padding: 0.4rem 1.5rem;
     border-radius: 0.4rem;
@@ -70,6 +128,6 @@
 
   &__chapter-btn:hover {
     background: #fff;
-    color: #eb455f;
+    color: #0290ff;
   }
 }
