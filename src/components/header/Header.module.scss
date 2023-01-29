@@ -15,7 +15,9 @@
   }
 
   &__title-link {
-    font-size: 2rem;
+    font-size: 1.875rem;
+    color: #0290ff;
+    font-family: 'Montserrat', sans-serif;
   }
 
   &__nav-items {
@@ -24,7 +26,7 @@
   }
 
   &__profile-btn {
-    border: 1px solid #eb455f;
+    border: 1px solid #0290ff;
     border-radius: 50%;
     padding: 4px;
     display: flex;
@@ -34,18 +36,19 @@
     transition: all 0.5ms ease-in;
   }
 
-  &__profile-btn:hover {
-    background-color: #eb455f;
-  }
-
   &__profile-svg {
     width: 32px;
     height: 32px;
-    fill: #eb455f;
+    fill: #0290ff;
     transition: all 0.5ms ease-in;
   }
 
-  &__profile-btn:hover &__profile-svg {
-    fill: #fff;
+  &__nav-link {
+    opacity: 0.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.813rem;
+    color: #121212;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
   }
 }

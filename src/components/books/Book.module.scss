@@ -9,43 +9,90 @@
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
   }
 
   &__title {
     line-height: 1.5;
+    margin-top: 0.188rem;
+    font-size: 1.375rem;
+    letter-spacing: -0.2px;
+    font-weight: 700;
+    color: #121212;
+  }
+
+  &__categories {
+    font-weight: 700;
+    color: #121212;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    opacity: 0.5;
   }
 
   &__btn-group {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1.313rem;
+  }
+
+  &__author {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #4386bf;
   }
 
   &__btn {
-    cursor: pointer;
-    background: none;
-    color: #081c91;
-    border-right: 1px solid #081c91;
-    padding: 0 1rem;
-  }
-
-  &__btn:first-child {
-    padding-left: 0;
-  }
-
-  &__btn:last-child {
-    padding-right: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #0000;
     border: none;
+    color: #4386bf;
+    font-size: 0.875rem;
+    font-weight: 300;
+    align-items: center;
+    cursor: pointer;
   }
 
-  &__btn:hover {
-    color: #2b3467;
+  &__vertical-divider {
+    width: 0.125rem;
+    height: 1.5rem;
+    background-color: #e8e8e8;
+    margin: 0 1rem;
   }
 
   &__right {
     display: flex;
-    gap: 1rem;
     align-items: center;
+  }
+
+  &__progress-wrapper {
+    width: 5.625rem;
+    height: 5.625rem;
+    padding: 0.63rem 1rem 0.75rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__progress-text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__progress-title {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #121212;
+  }
+
+  &__progress-complete {
+    color: #2b34679c;
+  }
+
+  &__progress-divider {
+    width: 0.125rem;
+    height: 4.375rem;
+    margin: 0 3.688rem 0 4.938rem;
+    background-color: #e8e8e8;
   }
 
   &__chapter-details {
@@ -56,20 +103,25 @@
 
   &__chapter-title {
     line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__chapter-name {
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #121212;
+    font-size: 0.813rem;
+    opacity: 0.5;
   }
 
   &__chapter-btn {
-    background: #eb455f;
-    border: 1px solid #eb455f;
+    background: #0290ff;
+    border: 1px solid #0290ff;
     color: #fff;
     padding: 0.4rem 1.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
     transition: all 0.5s ease;
-  }
-
-  &__chapter-btn:hover {
-    background: #fff;
-    color: #eb455f;
   }
 }
